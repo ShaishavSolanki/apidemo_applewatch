@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -14,11 +14,78 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="APIDemo_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Watch App" id="x5x-MS-41c"/>
-                        <button width="1" alignment="left" title="Get Data" id="oFp-PR-3wU"/>
+                        <label alignment="center" text="Vancouver" id="x5x-MS-41c"/>
+                        <separator width="50" alignment="center" id="3Ds-jv-lxu">
+                            <color key="color" red="0.6048134396" green="1" blue="0.36223594660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <group alignment="left" spacing="10" id="GIy-3g-scg">
+                            <items>
+                                <imageView width="40" height="36" alignment="left" verticalAlignment="center" image="sunrise" id="T3h-V7-3U3"/>
+                                <group width="1" height="43" alignment="left" layout="vertical" id="TQv-hb-9Yj">
+                                    <items>
+                                        <label width="100" alignment="left" text="Sunrise is at: " id="x3q-WK-vDj"/>
+                                        <label width="121" alignment="left" verticalAlignment="center" text="Sunrise Time" textAlignment="left" numberOfLines="2" id="okG-wH-Moc"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group alignment="left" spacing="10" id="DJr-Bi-hay">
+                            <items>
+                                <imageView width="40" height="36" alignment="left" verticalAlignment="center" image="sunset" id="dK4-SM-AWc"/>
+                                <group width="1" height="43" alignment="left" layout="vertical" id="ifq-kX-Kz2">
+                                    <items>
+                                        <label width="100" alignment="left" verticalAlignment="bottom" text="Sunset Time" id="wsv-WV-lIj"/>
+                                        <label width="100" alignment="left" text="Sunset is at: " id="aL8-EI-WYO"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <imageView width="32" height="32" alignment="center" id="FE8-wl-SQV"/>
+                        <button width="1" alignment="center" title="Change City" id="wBm-HU-Bce">
+                            <connections>
+                                <action selector="changeCityButton" destination="AgC-eL-Hgc" id="jZL-Yb-oqF"/>
+                                <segue destination="y6p-5p-WPy" kind="push" id="Y7B-O1-jfd"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="citylabel" destination="x5x-MS-41c" id="smd-5j-goH"/>
+                        <outlet property="loadingImage" destination="FE8-wl-SQV" id="n3y-Ab-4EC"/>
+                        <outlet property="sunRiseTime_Label" destination="x3q-WK-vDj" id="G4O-5Q-AGx"/>
+                        <outlet property="sunriseLabel" destination="okG-wH-Moc" id="HgD-2u-aOK"/>
+                        <outlet property="sunsetLabel" destination="wsv-WV-lIj" id="hzb-Hu-ejW"/>
+                        <outlet property="sunsetTime_Label" destination="aL8-EI-WYO" id="vtQ-hz-Hdu"/>
+                    </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="25" y="6"/>
+        </scene>
+        <!--Change City Interface Controller-->
+        <scene sceneID="j81-bv-zic">
+            <objects>
+                <controller id="y6p-5p-WPy" customClass="ChangeCityInterfaceController" customModule="APIDemo_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Select City" id="51G-dz-TzZ">
+                            <connections>
+                                <action selector="selectCityButtonAction" destination="y6p-5p-WPy" id="XFG-O4-w8n"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Current City:" id="MRN-ZL-zWC"/>
+                        <label alignment="left" text="Label" id="B2g-Bq-xNS"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Save" id="qnj-WK-G7D">
+                            <connections>
+                                <action selector="saveButtonAction" destination="y6p-5p-WPy" id="H3A-bI-E2M"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="cityLabel" destination="B2g-Bq-xNS" id="xwN-TU-sim"/>
+                        <outlet property="saveButton" destination="qnj-WK-G7D" id="6ql-KN-EKg"/>
+                        <outlet property="selectCityButton" destination="51G-dz-TzZ" id="Brd-q7-K8g"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="296" y="9"/>
         </scene>
     </scenes>
 </document>

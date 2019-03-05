@@ -21,6 +21,7 @@
 		056B2FB0222CDAC6000F8CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 056B2FAF222CDAC6000F8CA5 /* Assets.xcassets */; };
 		0582B135222CF7C8008A464A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0582B133222CF7C8008A464A /* Main.storyboard */; };
 		1F12F189A34266575808861E /* Pods_APIDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F1FF7CBE316F7AE208B02B /* Pods_APIDemo.framework */; };
+		9B6D396A222ECF4D007343B8 /* ChangeCityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D3969222ECF4D007343B8 /* ChangeCityInterfaceController.swift */; };
 		DA33CDBC608D164A5668A8A4 /* Pods_APIDemo_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13E593EABBE85ED535B3C03 /* Pods_APIDemo_WatchKit_Extension.framework */; };
 		EC9F5B15CA534826A1BD9BF2 /* Pods_APIDemo_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2451FB6B7F95ACBA4988802C /* Pods_APIDemo_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		31F1FF7CBE316F7AE208B02B /* Pods_APIDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APIDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF0AF8FF4B2EC37EBEB8311 /* Pods-APIDemo WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIDemo WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-APIDemo WatchKit App/Pods-APIDemo WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		6D9930A793F6379F5AB88708 /* Pods-APIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIDemo.release.xcconfig"; path = "Target Support Files/Pods-APIDemo/Pods-APIDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9B6D3969222ECF4D007343B8 /* ChangeCityInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityInterfaceController.swift; sourceTree = "<group>"; };
 		A5FF5DC30ED4E057097849CD /* Pods-APIDemo WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIDemo WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-APIDemo WatchKit Extension/Pods-APIDemo WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		A709ECC3C3D97F9A4A616F91 /* Pods-APIDemo WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIDemo WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-APIDemo WatchKit Extension/Pods-APIDemo WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		D13E593EABBE85ED535B3C03 /* Pods_APIDemo_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APIDemo_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 		056B2FAA222CDAC6000F8CA5 /* APIDemo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9B6D3969222ECF4D007343B8 /* ChangeCityInterfaceController.swift */,
 				056B2FAB222CDAC6000F8CA5 /* InterfaceController.swift */,
 				056B2FAD222CDAC6000F8CA5 /* ExtensionDelegate.swift */,
 				056B2FAF222CDAC6000F8CA5 /* Assets.xcassets */,
@@ -452,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6D396A222ECF4D007343B8 /* ChangeCityInterfaceController.swift in Sources */,
 				056B2FAE222CDAC6000F8CA5 /* ExtensionDelegate.swift in Sources */,
 				056B2FAC222CDAC6000F8CA5 /* InterfaceController.swift in Sources */,
 			);

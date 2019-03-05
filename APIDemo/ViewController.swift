@@ -46,8 +46,8 @@ class ViewController: UIViewController {
             print("Sunset: \(sunsetTime)")
             
             // show the sunrise and sunset in the IPhone App
-            self.sunsetTimeLabel.text = "\(sunriseTime)"
-            self.sunriseTimeLabel.text = "\(sunsetTime)"
+            self.sunsetTimeLabel.text = "\(sunriseTime!)"
+            self.sunriseTimeLabel.text = "\(sunsetTime!)"
             
         }
     }
